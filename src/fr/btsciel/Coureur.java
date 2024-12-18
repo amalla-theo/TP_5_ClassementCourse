@@ -8,6 +8,8 @@ public class Coureur extends Personne {
 
     public Coureur(Genre genre, String nom, String prenom, Categorie categorie, LocalTime duree) {
         super(genre, nom, prenom);
+        this.categorie = categorie;
+        this.duree = duree;
     }
 
     public Categorie getCategorie() {
