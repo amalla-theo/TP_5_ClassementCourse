@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 public class GestionCoureurs {
 
+    // Création de l'ArrayList permettant de stocker les données
     public ArrayList<Coureur> coureurs = new ArrayList();
 
     private void restaurerFichierTexte (String s) throws IOException {
@@ -16,11 +17,12 @@ public class GestionCoureurs {
         BufferedReader br = Files.newBufferedReader(Path.of("course.txt"));
         String line;
         while ((line = br.readLine()) != null) {
+
+            // Sépare les éléments d'une même ligne et les place dans un tableau
+            // Ici, la virgule "," est le séparateur
             String[] split = line.split(",");
+
             if (split.length == 5) {
-                /*Genre g = Genre.valueOf(split[0]);
-                Categorie c= Categorie.valueOf(split[3].trim().toString());
-                LocalTime t = LocalTime.ofSecondOfDay(Integer.valueOf(split[4].trim().toString()));*/
                 Coureur coureur = new Coureur(
                         Genre.valueOf(split[0].trim().toString()),
                         split[1],
@@ -40,6 +42,8 @@ public class GestionCoureurs {
     public GestionCoureurs() throws IOException {
         restaurerFichierTexte("course.txt");
     }
+
+    // Tri des coureurs
     public void tri_nom_croissant (){
         coureurs.sort((c1, c2) -> c1.getNom().compareToIgnoreCase(c2.getNom()));
     }

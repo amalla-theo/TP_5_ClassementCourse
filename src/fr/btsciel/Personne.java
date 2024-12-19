@@ -2,6 +2,7 @@ package fr.btsciel;
 
 public class Personne {
 
+    // Déclaration des objets
     private Genre genre;
     private String nom;
     private String prenom;

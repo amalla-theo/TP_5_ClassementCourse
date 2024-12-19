@@ -2,7 +2,10 @@ package fr.btsciel;
 
 import java.time.LocalTime;
 
+// Coureur hérite de Personne
 public class Coureur extends Personne {
+
+    // Déclaration des objets propre à Coureur
     private Categorie categorie;
     private LocalTime duree;
 

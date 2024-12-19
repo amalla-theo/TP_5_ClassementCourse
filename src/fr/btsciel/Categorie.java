@@ -1,5 +1,6 @@
 package fr.btsciel;
 
+// Permet d'uniquement traiter les catégories ci-dessous
 public enum Categorie {
     ELITE_1,
     ELITE_2,
