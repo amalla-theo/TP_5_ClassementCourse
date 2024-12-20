@@ -1,9 +1,11 @@
 package fr.btsciel;
 
+// Importation des classes nécessaires
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
@@ -14,7 +16,7 @@ public class GestionCoureurs {
 
     private void restaurerFichierTexte (String s) throws IOException {
 
-        BufferedReader br = Files.newBufferedReader(Path.of("course.txt"));
+        BufferedReader br = Files.newBufferedReader(Paths.get("course.txt"));
         String line;
         while ((line = br.readLine()) != null) {
 
